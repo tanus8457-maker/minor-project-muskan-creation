@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<head>
+   <title>Minor Projects</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+  background-color: #fffafc;
+  color: #333;
+}
+
+
+    /* Navigation */
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+    }
+
+    nav h1 {
+      color: #c49b63;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #c49b63;
+    }
+   .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .nav-right a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .nav-right a:hover {
+      color: goldenrod;
+    }
+
+
+
+    /* Hero Section */
+    .hero {
+       background-image: url("C:/Users/Pc/Pictures/Project/i4.png"); 
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+     position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+
+    .hero-content h2 {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background-color: #c49b63;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #a97c4f;
+    }
+
+    /* Featured Section */
+    .featured {
+      padding: 80px 60px;
+      text-align: center;
+    }
+
+    .featured h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #c49b63;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .product {
+text-decoration: none;
+
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: 0.3s;
+
+    }
+
+    .product:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .product img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .product a h3{ 
+      text-decoration: none;
+      color: #333;
+      padding: 15px;
+      font-size: 20px;
+}     
+
+  .product a h3:hover {
+      color: goldenrod;
+    }
+
+    /* About Section */
+    .about {
+      background-color: #fdf8f2;
+      padding: 80px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1;
+      padding-right: 30px;
+      min-width: 300px;
+    }
+
+    .about-text h2 {
+      font-size: 30px;
+      color: #c49b63;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .about img {
+      width: 400px;
+      border-radius: 15px;
+      min-width: 250px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+      margin-top: 50px;
+    }
+
+    footer p {
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 15px 20px;
+      }
+
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about img {
+        margin-top: 30px;
+      }
+
+      .hero-content h2 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header>
+   <nav>
+  <h1>Muskan Creations</h1>
+  <ul>
+    <li><a href="f.html">Home</a></li>
+    <li><a href="#">Collection</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+    <a href="#">🛒 Cart</a>
+  </div>
+</nav>
+
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Elegant Jewelry for Every Occasion</h2>
+      <p>Discover timeless pieces handcrafted with love and brilliance.</p>
+      <button class="btn">Shop Now</button>
+    </div>
+  </section>
+
+  <!-- Featured Section -->
+  <section class="featured">
+    <h2>Our Featured Collection</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="Project\41.jpg" alt="Necklace">
+        <a href="neck.html"><h3>Necklace</h3></a>
+      </div>
+      <div class="product">
+        <img src="C:\Users\Pc\Pictures\Project\41.jpg" alt="Earrings">
+        <a href=""><h3>Earrings</h3></a>
+      </div>
+      <div class="product">
+        <img src="C:\Users\Pc\Pictures\Project\41.jpg" alt="Bracelet">
+        <a href=""><h3>Bracelet</h3></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-text">
+      <h2>About ShineCraft</h2>
+      <p>At ShineCraft, we believe jewelry is more than adornment—it's an expression of elegance and individuality. Every piece is meticulously designed to bring sparkle and sophistication to your style.</p>
+    </div>
+    <img src="C:\Users\Pc\Pictures\Project\41.jpg" alt="Jewelry Crafting">
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ShineCraft Jewels | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

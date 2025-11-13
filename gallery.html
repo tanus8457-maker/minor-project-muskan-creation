@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery - Muskan Creations</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function showGallery() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const category = urlParams.get("category");
+
+      const gallery = document.getElementById("gallery");
+      let content = "";
+
+      if (category === "rings") {
+        content = `
+          <h2>Rings Collection</h2>
+          <div class="item">
+            <img src="images/ring1.jpg" alt="Ring">
+            <p>💍 Gold Diamond Ring<br>Price: ₹2,500</p>
+          </div>
+          <div class="item">
+            <img src="images/ring2.jpg" alt="Ring">
+            <p>💍 Silver Stylish Ring<br>Price: ₹1,800</p>
+          </div>
+        `;
+      } else if (category === "bracelets") {
+        content = `
+          <h2>Bracelets Collection</h2>
+          <div class="item">
+            <img src="images/bracelet1.jpg" alt="Bracelet">
+            <p>✨ Golden Charm Bracelet<br>Price: ₹3,200</p>
+          </div>
+        `;
+      } else if (category === "earrings") {
+        content = `
+          <h2>Earrings Collection</h2>
+          <div class="item">
+            <img src="images/earring1.jpg" alt="Earrings">
+            <p>👑 Diamond Drop Earrings<br>Price: ₹2,999</p>
+          </div>
+        `;
+      } else {
+        content = <h2>Please select a category from the menu.</h2>;
+      }
+
+      gallery.innerHTML = content;
+    }
+  </script>
+</head>
+<body onload="showGallery()">
+
+  <header>
+    <nav>
+      <h1>Muskan Creations</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html?category=rings">Rings</a></li>
+        <li><a href="gallery.html?category=bracelets">Bracelets</a></li>
+        <li><a href="gallery.html?category=earrings">Earrings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="gallery" class="gallery"></section>
