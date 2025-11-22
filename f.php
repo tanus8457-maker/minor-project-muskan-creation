@@ -400,8 +400,9 @@ html {
      <?php if(!isset($_SESSION['username'])) { ?>
     <a href="login.html">Login</a>
     <a href="register.html">Register</a>
-      <?php } ?>
-    <a href="#">🛒 Cart</a>
+      <?php } else { ?>
+    <a href="cart.php">🛒 Cart</a>
+    <?php } ?>
   </div>
 <?php if(isset($_SESSION['username'])) { ?>
 <div class="profile-area">
